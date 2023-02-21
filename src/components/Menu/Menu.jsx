@@ -1,5 +1,25 @@
 import React from "react";
 
-export const Menu = () => {
-  return <div>Menu</div>;
+export const Menu = ({ menu }) => {
+  const restaurantDishes = menu.map(({ name }) => name).join(" ,");
+
+  return (
+    <div>
+      <h3>Menu</h3>
+      <div>{restaurantDishes}</div>
+    </div>
+  );
 };
+
+/*
+export const Menu = ({ menu }) => {
+  const restaurantDishes = menu.map(({ name }) => name).join(" ,");
+
+  return React.createElement("div", {
+    children: [
+      React.createElement("h3", {}, "Menu"),
+      React.createElement("div", {}, restaurantDishes),
+    ],
+  });
+};
+*/
