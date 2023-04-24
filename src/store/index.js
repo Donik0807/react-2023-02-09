@@ -1,6 +1,9 @@
 import { combineReducers, createStore } from "redux";
 import { cartReducer } from "./cart/reducer";
 import { restaurantReducer } from "./entities/restaurant/reducer";
+import { menuReducer } from "./entities/menu/reducer";
+import { usersReducer } from "./entities/users/reducer";
+import { reviewsReducer } from "./entities/reviews/reducer";
 
 // const rootReducer = (state = {}, action = {}) => {
 //   return {
@@ -12,6 +15,9 @@ import { restaurantReducer } from "./entities/restaurant/reducer";
 const rootReducer = combineReducers({
   cart: cartReducer,
   restaurant: restaurantReducer,
+  menu: menuReducer,
+  users: usersReducer,
+  reviews: reviewsReducer
 });
 
 export const store = createStore(rootReducer);
